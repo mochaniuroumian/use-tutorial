@@ -1,34 +1,21 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        use-tutorial
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <h1 class="title">
+      共享建站使用教程
+    </h1>
+    <div class="main">
+      <left></left>
+      <right></right>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import left from '../components/left'
+import right from '../components/right'
+export default {
+  components: { left,right }
+  }
 </script>
 
 <style>
@@ -54,20 +41,15 @@ export default {}
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
+  height: 200px;
+  width: 100%;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.main{
+  width: 100%;
+  height: 500px;
 }
 </style>
