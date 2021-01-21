@@ -1,8 +1,8 @@
 <template>
   <section class="left">
       <ul>
-          <li><a class="nav-a">登录</a></li>
-          <li><a class="nav-a">基本信息（公司简介、联系我们）</a></li>
+          <li><a class="nav-a" @click="$router.push({name: 'index-right'})">登录</a></li>
+          <li><a class="nav-a" @click="$router.push({name: 'index-right2'})">基本信息（公司简介、联系我们）</a></li>
           <li><a class="nav-a">预设模块-组织结构【c模板】</a></li>
           <li><a class="nav-a">预设模块-荣誉【c模板】</a></li>
           <li><a class="nav-a">预设模块-伙伴（合作伙伴）</a></li>
