@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <h1 class="title">
+    <header class="title">
+      <h1>
       共享建站使用教程
     </h1>
+    </header>
     <div class="main">
       <left></left>
       <right></right>
@@ -22,13 +24,19 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .title {
+  display: block;
+  height: 200px;
+  width: 100%;
+  padding:20px 10px;
+}
+.title h1{
   font-family:
     'Quicksand',
     'Source Sans Pro',
@@ -39,15 +47,12 @@ export default {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  display: block;
   font-weight: 300;
   font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
-  height: 200px;
-  width: 100%;
+  line-height: 100px;
 }
-
 .main{
   width: 100%;
   height: 500px;
