@@ -23,8 +23,8 @@
         </ul> -->
          <ul>
           <li v-for="(item,index) in lists" :key="index">
-            <a @click="preClick(index)" class="pre_menu" :class="cur==index?'active':null" :title="item.name">
-              <span @click="$router.push({name: item.nameurl})">{{item.name}}</span>
+            <a @click="preClick(item,index)" class="pre_menu" :class="cur==index?'active':null" :title="item.name">
+              <span>{{item.name}}</span>
             </a>
             <ul v-show="cur==index&item.subItems!=null">
               <li v-for="(sub,i) in item.subItems" :key="i">
@@ -79,8 +79,9 @@ export default {
       ]}
   },
   methods: {
-    preClick(index) {
+    preClick(item,index) {
       this.cur = this.cur == index ? null : index
+      this.$router.push({name: item.nameurl})
      }
   }
 }
@@ -102,7 +103,7 @@ export default {
 
 .title {
   display: block;
-  height: 20vh;
+  height: 18vh;
   width: 100%;
 }
 .title h1{
@@ -120,11 +121,11 @@ export default {
   font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
-  line-height: 100px;
+  line-height: 18vh;
 }
 .main{
   width: 100%;
-  height: 80vh;
+  height: 82vh;
 }
 .left{
   width: 25%;
